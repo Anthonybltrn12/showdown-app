@@ -30,4 +30,15 @@ public class Person {
     public String getStatus(){
         return this.name + "has" + this.health + "health points";
     }
+
+    public void takeDamage(int amountOfDamage){
+        this.health -= amountOfDamage;
+        if(this.health < 0){
+            this.health = 0;
+        }
+    }
+    public void fight(Person opponent){
+        System.out.println(this.getName() + " prepares to fight " + opponent.getName());
+    }
+
 }
